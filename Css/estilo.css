@@ -36,3 +36,58 @@ body{
    bottom:24px;
   
 }
+.tarjeta3{
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    width: 300px;
+    height:400px;
+    margin: 0px;
+    border:.6px solid #000;
+   
+ }
+ .container img{
+     position: absolute;
+     width: 90px;
+     height: 90px;
+     border-radius: 50%;
+     margin:105px;
+     bottom:189px;
+ }
+ .tarjeta1 img{
+    bottom: 225px;
+}
+ .tarjeta2 img{
+     bottom: 225px;
+ }
+ .tarjeta3 img{
+    bottom: 225px;
+ }
+ .contenido{
+     position: relative;
+     top:118px;
+     text-align: center;
+ }
+ .contenido p{
+     text-align: justify;
+     margin: 40px;
+ }
+ .contenido h1{
+    font-family: 'Impact', arial;
+    color:#B32EAE;
+ }
+.valor span{
+    font-family: 'Impact', arial;
+    font-size:40px;
+    color:#B32EAE;
+}
+.tamanio{
+    height:600px;
+}
+.container,.valor{
+    position: relative;
+    bottom:10px;
+}
+#dinero{
+    top:10px;
+    font-size:80px;
+}
