@@ -16,6 +16,32 @@ body{
     bottom: 35px;
 }
  .tarjeta1{
+    position: relative;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    width: 300px;
+    height:400px;
+    margin: 0px;
+    border:.6px solid #000;
+    
+    
+ }
+ .tarjeta2{
+    position: relative;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    width: 300px;
+    height:450px;
+    margin:0px;
+    border:.6px solid #000;
+    box-shadow: 0px 5px 10px rgb(0, 0, 0); 
+    bottom:24px;
+    
+   
+ }
+ 
+ .tarjeta3{
+     position: relative;
     border-radius: 10px;
     background-color: #FFFFFF;
     width: 300px;
@@ -24,29 +50,8 @@ body{
     border:.6px solid #000;
     
  }
- .tarjeta2{
-    position: relative;
-   border-radius: 10px;
-   background-color: #FFFFFF;
-   width: 300px;
-   height:450px;
-   margin:0px;
-   border:.6px solid #000;
-   box-shadow: 0px 5px 10px rgb(0, 0, 0); 
-   bottom:24px;
-  
-}
-.tarjeta3{
-    border-radius: 10px;
-    background-color: #FFFFFF;
-    width: 300px;
-    height:400px;
-    margin: 0px;
-    border:.6px solid #000;
-   
- }
  .container img{
-     position: absolute;
+     position: relative;
      width: 90px;
      height: 90px;
      border-radius: 50%;
@@ -54,13 +59,16 @@ body{
      bottom:189px;
  }
  .tarjeta1 img{
-    bottom: 225px;
+    position: absolute;
+    bottom: 180px;
 }
  .tarjeta2 img{
+     position: absolute;
      bottom: 225px;
  }
  .tarjeta3 img{
-    bottom: 225px;
+    position: absolute;
+    bottom: 180px;
  }
  .contenido{
      position: relative;
@@ -90,4 +98,28 @@ body{
 #dinero{
     top:10px;
     font-size:80px;
+}
+.tarjeta1:hover{
+    z-index: 3;
+    -webkit-transform:scale(1.25);
+    -moz-transform:scale(1.25);
+    -ms-transform:scale(1.25);
+    -o-transform:scale(1.25);
+    transform:scale(1.25);
+}
+.tarjeta2:hover{
+    z-index: 3;
+    -webkit-transform:scale(1.15);
+    -moz-transform:scale(1.15);
+    -ms-transform:scale(1.15);
+    -o-transform:scale(1.15);
+    transform:scale(1.15);
+}
+.tarjeta3:hover{
+     z-index: 3;
+    -webkit-transform:scale(1.25);
+    -moz-transform:scale(1.25);
+    -ms-transform:scale(1.25);
+    -o-transform:scale(1.25);
+    transform:scale(1.25);
 }
