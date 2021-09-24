@@ -8,12 +8,14 @@ body{
     padding: 100px 0px 0px 82px;
     margin: 20px 134px;
     border-radius:10px 10px 10px 10px; 
+    top:20px;
 }
 .tarjetas{
     position: relative;
     display: flex;
     justify-content: center;
     bottom: 35px;
+    
 }
  .tarjeta1{
     position: relative;
