@@ -1,188 +1,144 @@
-body{
-    background-image: linear-gradient( 135deg, #B44FBD 10%, #D939CD 100%);
-    height:100%;
+:root {
+    --color-primary   : #f571f0;
+    --color-secondary : #821CBD;
+    --color-tertiary  : #340057;
+    --color-background: #B44FBD;
+    --color-shadow    : rgba(0, 0, 0, 0.3);
+    --card-width      : 300px;
+    --card-height     : 370px;
+    --card-margin     : 10px;
 }
-.container{
-    display: flex;
-    background-image: linear-gradient(  #821cbd 9%, #340057 100%);
-    padding: 100px 0px 0px 82px;
-    margin: 20px 134px;
-    border-radius:10px 10px 10px 10px; 
-    top:20px;
+
+* {
+    box-sizing: border-box;
+    margin    : 0px;
 }
-.tarjetas{
-    position: relative;
-    display: flex;
+
+html,
+body {
+    height: 99%;
+}
+
+body {
+    background     : var(--color-primary);
+    position       : relative;
+    display        : flex;
     justify-content: center;
-    bottom: 35px;
-    
-}
- .tarjeta1{
-    position: relative;
-    border-radius: 10px;
-    background-color: #FFFFFF;
-    width: 300px;
-    height:400px;
-    margin: 0px;
-    border:.6px solid #000;
-    
-    
- }
- .tarjeta2{
-    position: relative;
-    border-radius: 10px;
-    background-color: #FFFFFF;
-    width: 300px;
-    height:450px;
-    margin:0px;
-    border:.6px solid #000;
-    box-shadow: 0px 5px 10px rgb(0, 0, 0); 
-    bottom:24px;
-    
-   
- }
- 
- .tarjeta3{
-     position: relative;
-    border-radius: 10px;
-    background-color: #FFFFFF;
-    width: 300px;
-    height:400px;
-    margin: 0px;
-    border:.6px solid #000;
-    
- }
- .container img{
-     position: relative;
-     width: 90px;
-     height: 90px;
-     border-radius: 50%;
-     margin:105px;
-     bottom:189px;
- }
- .tarjeta1 img{
-    position: absolute;
-    bottom: 180px;
-}
- .tarjeta2 img{
-     position: absolute;
-     bottom: 225px;
- }
- .tarjeta3 img{
-    position: absolute;
-    bottom: 180px;
- }
- .contenido{
-     position: relative;
-     top:118px;
-     text-align: center;
- }
- .contenido p{
-     text-align: justify;
-     margin: 40px;
- }
- .contenido h1{
-    font-family: 'Impact', arial;
-    color:#B32EAE;
- }
-.valor span{
-    font-family: 'Impact', arial;
-    font-size:40px;
-    color:#B32EAE;
-}
-.tamanio{
-    height:600px;
-}
-.container,.valor{
-    position: relative;
-    bottom:10px;
-}
-#dinero{
-    top:10px;
-    font-size:80px;
-}
-.tarjeta1:hover{
-    z-index: 3;
-    -webkit-transform:scale(1.25);
-    -moz-transform:scale(1.25);
-    -ms-transform:scale(1.25);
-    -o-transform:scale(1.25);
-    transform:scale(1.25);
-}
-.tarjeta2:hover{
-    z-index: 3;
-    -webkit-transform:scale(1.15);
-    -moz-transform:scale(1.15);
-    -ms-transform:scale(1.15);
-    -o-transform:scale(1.15);
-    transform:scale(1.15);
-}
-.tarjeta3:hover{
-     z-index: 3;
-    -webkit-transform:scale(1.25);
-    -moz-transform:scale(1.25);
-    -ms-transform:scale(1.25);
-    -o-transform:scale(1.25);
-    transform:scale(1.25);
+    align-items    : center;
 }
 
-@media only screen and (max-width: 300px){
-   
-    .tarjetas{
-    display: flex;
-    flex-direction:column;
+.container__cards {
+    position     : absolute;
+    top          : calc(50% - 45vh);
+    left         : 50%;
+    transform    : translateX(-50%);
+    display      : grid;
+    place-content: center;
+    width        : 100%;
+    height       : 90vh;
+    max-width    : 800px;
+    background   : red;
+}
+
+.tarjetas {
+    display         : flex;
+    flex-wrap       : wrap;
+    justify-content : center;
+    align-items     : center;
+    margin          : 0 auto;
+    width           : 80%;
+    padding         : 2rem;
+    border-radius   : 12px;
+    background-image: linear-gradient(var(--color-secondary) 9%, var(--color-tertiary) 100%);
+}
+
+.tarjeta {
+    display        : flex;
+    flex-direction : column;
     justify-content: center;
-    align-items: center;
-    bottom: 40px;
-    right: 220px;
-    }
-
-    .tarjeta1{
-        bottom:90px;
-    }
-    .tarjeta2{
-        bottom: -18;
-    }
-    .tarjeta3{
-        top:50px;
-    }
-    .container{
-        background-image:none;
-    }
-    
+    align-items    : center;
+    margin         : var(--card-margin);
+    width          : var(--card-width);
+    height         : var(--card-height);
+    padding        : 2rem;
+    background     : white;
+    border-radius  : 10px;
+    box-shadow     : 0 0 10px rgba(0, 0, 0, 0.3);
+    transition     : transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
-@media only screen and (max-width: 1300px){
-   
-    .body{
-        height:100vh;
-    }
-    .tarjetas{
-        display: flex;
-        flex-direction:column;
-        justify-content: center;
-        align-items: center;
-        bottom: 40px;
-        right: 199px;
+.tarjeta:hover {
+    transform: scale(1.1);
+}
 
-    }
+.tarjetas:hover .tarjeta:not(:hover) {
+    filter: blur(3px);
+}
 
-    .tarjeta1{
-        bottom:90px;
-    }
-    .tarjeta2{
-        bottom: -18;
-    }
-    .tarjeta3{
-        top:50px;
-    }
-    .container{
-        background-image:none;
-    }
-    
+.container__image {
+    width        : 80px;
+    height       : 80px;
+    border-radius: 50%;
+    object-fit   : cover;
+}
+
+.tarjeta__imagen {
+    width        : 80px;
+    height       : 80px;
+    border-radius: 50%;
+    object-fit   : cover;
+}
+
+.tarjeta__contenido {
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : center;
+}
+
+.tarjeta__titulo {
+    color: var(--color-primary);
+}
+
+.tarjeta__valor {
+    color      : var(--color-secondary);
+    font       : 1.3em sans-serif;
+    font-weight: bold;
 }
 
 
+@media only screen and (max-width: 768px) {
+    .tarjetas {
+        flex-direction: column;
+    }
 
-    
-    
+    .tarjeta {
+        width        : 300px;
+        height       : 370px;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 361px) {
+    .tarjetas {
+        flex-direction: column;
+    }
+
+    .tarjeta {
+        width        : 100%;
+        height       : 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 504px) {
+    .tarjetas {
+        flex-direction: column;
+    }
+
+    .tarjeta {
+        width        : 100%;
+        height       : 100%;
+        margin-bottom: 20px;
+    }
+}

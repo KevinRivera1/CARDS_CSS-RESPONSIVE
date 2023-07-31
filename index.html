@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,42 +9,48 @@
     <link href="https://allfont.es/allfont.css?fonts=impact" rel="stylesheet" type="text/css" />
     <title>Proyecto CSS</title>
 </head>
+
 <body>
-    <div class="container">
-        <div class="tarjetas">
-            
-            <div class="tarjeta1">
-                <img src="img/img1.jpeg" alt="">
-                <div class="contenido">
-                    <h1>Individual</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam similique provident ut iure consequatur! Voluptatum </p>
-                    <div class="valor"><span>$ 3.99</span></div>
-                </div>
 
+
+    <div class="tarjetas">
+        <div class="tarjeta tarjeta--individual" onmouseover="hoverTarjeta(this)">
+            <div class="tarjeta__container container__image">
+                <img src="img/img1.jpeg" alt="" class="tarjeta__imagen">
             </div>
-
-             
-            <div class="tarjeta2">
-                <img src="img/img2.jpeg" alt="">
-                <div class="contenido">
-                    <h1>Team</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi atque eos, quod a reprehenderit necessitatibus. </p>
-                    <div class="valor" id="dinero"><span>$ 33.99</span></div>
-            
-                </div>
-            
+            <div class="tarjeta__contenido">
+                <h1 class="tarjeta__titulo">Individual</h1>
+                <p class="tarjeta__descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+                    similique provident ut iure consequatur! Voluptatum </p>
+                <div class="tarjeta__valor"><span>$ 3.99</span></div>
             </div>
+        </div>
 
-            <div class="tarjeta3">
-                <img src="img/img3.jpeg" alt="">
-                <div class="contenido">
-                    <h1>Enterprise</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium, quisquam. Sequi, repellat laudantium.</p>
-                    <div class="valor"><span>$ 89.99</span></div>
-                </div>
+        <div class="tarjeta tarjeta--team" onmouseover="hoverTarjeta(this)">
+            <div class="tarjeta__container container__image">
+                <img src="img/img1.jpeg" alt="" class="tarjeta__imagen">
             </div>
+            <div class="tarjeta__contenido">
+                <h1 class="tarjeta__titulo">Team</h1>
+                <p class="tarjeta__descripcion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi atque
+                    eos, quod a reprehenderit necessitatibus. </p>
+                <div class="tarjeta__valor" id="dinero"><span>$ 33.99</span></div>
+            </div>
+        </div>
 
+        <div class="tarjeta tarjeta--enterprise" onmouseover="hoverTarjeta(this)">
+            <div class="tarjeta__container container__image">
+                <img src="img/img1.jpeg" alt="" class="tarjeta__imagen">
+            </div>
+            <div class="tarjeta__contenido">
+                <h1 class="tarjeta__titulo">Enterprise</h1>
+                <p class="tarjeta__descripcion">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium,
+                    quisquam. Sequi, repellat laudantium.</p>
+                <div class="tarjeta__valor"><span>$ 89.99</span></div>
+            </div>
         </div>
     </div>
+
 </body>
+
 </html>
