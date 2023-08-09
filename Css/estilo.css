@@ -1,4 +1,5 @@
 :root {
+    --font-size-base      : 16px;
     --color-primary       : #f571f0;
     --color-secondary     : #821CBD;
     --color-text          : #AA26AA;
@@ -6,24 +7,25 @@
     --color-background    : #B44FBD;
     --color-background-img: #D9C1E1;
     --color-shadow        : rgba(0, 0, 0, 0.3);
-    --card-width          : 300px;
-    --card-height         : 370px;
-    --card-margin         : 10px;
+    --card-width          : 18.75rem;
+    --card-height         : 23.125rem;
+    --card-margin         : 0.625rem;
 }
 
 * {
     box-sizing: border-box;
-    margin    : 0px;
+    margin    : 0;
 }
 
 body {
     background     : var(--color-primary);
-    padding        : 92px 0;
+    padding        : 5.75rem 0;
     height         : 100%;
     display        : flex;
     justify-content: center;
     align-items    : center;
     position       : relative;
+    font-size      : var(--font-size-base);
 }
 
 .container {
@@ -31,13 +33,13 @@ body {
     flex-direction : column;
     justify-content: center;
     align-items    : center;
-    gap            : 20px;
+    gap            : 1.25rem;
     width          : 100%;
     height         : 100%;
     padding        : 2rem;
-    border-radius  : 12px;
+    border-radius  : 0.75rem;
     background     : var(--color-background);
-    box-shadow     : 0 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow     : 0 0 0.625rem rgba(0, 0, 0, 0.3);
 }
 
 .tarjetas {
@@ -47,7 +49,7 @@ body {
     align-items     : center;
     width           : 77%;
     padding         : 2rem;
-    border-radius   : 12px;
+    border-radius   : 0.75rem;
     background-image: linear-gradient(var(--color-secondary) 9%, var(--color-tertiary) 100%);
 }
 
@@ -56,14 +58,14 @@ body {
     flex-direction : column;
     justify-content: center;
     align-items    : center;
-    gap            : 20px;
+    gap            : 1.25rem;
     margin         : var(--card-margin);
     width          : var(--card-width);
     height         : var(--card-height);
     padding        : 2rem;
     background     : white;
-    border-radius  : 10px;
-    box-shadow     : 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius  : 0.625rem;
+    box-shadow     : 0 0 0.625rem rgba(0, 0, 0, 0.3);
     transition     : transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
@@ -72,14 +74,14 @@ body {
 }
 
 .tarjetas:hover .tarjeta:not(:hover) {
-    filter: blur(3px);
+    filter: blur(0.1875rem);
 }
 
 .container__image {
     display            : flex;
     align-items        : center;
     justify-content    : center;
-    padding            : .8rem;
+    padding            : 0.05rem;
     border-radius      : 50%;
     background-color   : var(--color-background-img);
     object-fit         : cover;
@@ -87,7 +89,7 @@ body {
 }
 
 .tarjeta__imagen {
-    width : 60px;
+    width : 3.75rem;
     height: auto;
 }
 
@@ -96,12 +98,12 @@ body {
     flex-direction : column;
     justify-content: center;
     align-items    : center;
-    gap            : 20px;
+    gap            : 1.25rem;
 }
 
 .tarjeta__titulo {
     color      : var(--color-text);
-    font-size  : 1.7rem;
+    font-size  : 1.0625rem;
     font-weight: bold;
 }
 
@@ -115,20 +117,21 @@ body {
     font-weight: bold;
 }
 
+@media only screen and (max-width: 48rem) {
 
-@media only screen and (max-width: 768px) {
     .tarjetas {
         flex-direction: column;
     }
 
     .tarjeta {
-        width        : 300px;
-        height       : 370px;
-        margin-bottom: 20px;
+        width        : 18.75rem;
+        height       : 23.125rem;
+        margin-bottom: 1.25rem;
     }
 }
 
-@media only screen and (max-width: 361px) {
+@media only screen and (max-width: 22.5625rem) {
+
     .tarjetas {
         flex-direction: column;
     }
@@ -136,11 +139,12 @@ body {
     .tarjeta {
         width        : 100%;
         height       : 100%;
-        margin-bottom: 20px;
+        margin-bottom: 1.25rem;
     }
 }
 
-@media only screen and (max-width: 504px) {
+@media only screen and (max-width: 31.5rem) {
+
     .tarjetas {
         flex-direction: column;
     }
@@ -148,6 +152,6 @@ body {
     .tarjeta {
         width        : 100%;
         height       : 100%;
-        margin-bottom: 20px;
+        margin-bottom: 1.25rem;
     }
 }
