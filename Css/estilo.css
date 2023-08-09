@@ -81,7 +81,7 @@ body {
     display            : flex;
     align-items        : center;
     justify-content    : center;
-    padding            : 0.05rem;
+    padding            : .95rem;
     border-radius      : 50%;
     background-color   : var(--color-background-img);
     object-fit         : cover;
